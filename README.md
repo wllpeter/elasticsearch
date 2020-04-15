@@ -26,3 +26,5 @@ https://github.com/NLPchina/elasticsearch-sql/releases/download/5.4.1.0/es-sql-s
 cd site-server
 npm install express --save
 node node-server.js 
+可视化页面访问地址
+http://ip:8080/
