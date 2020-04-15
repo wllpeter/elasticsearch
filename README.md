@@ -19,3 +19,10 @@ https://github.com/lukas-vlcek/bigdesk
 https://github.com/NLPchina/elasticsearch-sql/tree/5.5.3.0
 安装命令：
 ./bin/elasticsearch-plugin install https://github.com/NLPchina/elasticsearch-sql/releases/download/5.3.3.0/elasticsearch-sql-5.5.3.0.zip
+####elasticsearch-sql (可视化页面)
+插件地址：
+https://github.com/NLPchina/elasticsearch-sql/releases/download/5.4.1.0/es-sql-site-standalone.zip
+下载完成后解压缩
+cd site-server
+npm install express --save
+node node-server.js 
