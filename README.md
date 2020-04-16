@@ -28,3 +28,90 @@ npm install express --save
 node node-server.js 
 可视化页面访问地址
 http://ip:8080/
+
+####自定义分词器 mytokenizer
+http://127.0.0.1:9200/my_user/
+
+{
+	"settings": {
+    	"analysis": {
+    		"analyzer": {
+        		"myanalyzer": {
+        			"tokenizer": "mytokenizer"
+        		}
+    		},
+    		"tokenizer": {
+        		"mytokenizer": {
+        		"type": "ngram",
+        		"min_gram": 1,
+        		"max_gram": 2,
+        		"token_chars": [
+            		"letter",
+            		"digit",
+            		"whitespace",
+            		"punctuation",
+            		"symbol"
+        		]
+        		}
+    		}
+    	}
+	},
+    "mappings":{
+        "user":{
+            "properties":{
+                "id":{
+                    "type":"long",
+                    "store": true,
+                    "index": false,
+                    "fields":{
+                        "keyword":{
+                            "type":"keyword"
+                        }
+                    }
+                },
+                "username":{
+                    "type":"text",
+                    "store": true,
+                    "index": true,
+                    "analyzer": "myanalyzer",
+                    "fields":{
+                        "keyword":{
+                            "type":"keyword"
+                        }
+                    }
+                },
+                "password":{
+                    "type":"text",
+                    "store": true,
+                    "index": true,
+                    "analyzer": "myanalyzer",
+                    "fields":{
+                        "keyword":{
+                            "type":"keyword"
+                        }
+                    }
+                },
+                "age":{
+                    "type":"integer",
+                    "fields":{
+                        "keyword":{
+                            "type":"keyword"
+                        }
+                    }
+                },
+                "ip":{
+                    "type":"text",
+                    "store": true,
+                    "index": true,
+                    "analyzer": "myanalyzer",
+                    "fields":{
+                        "keyword":{
+                            "type":"keyword"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
