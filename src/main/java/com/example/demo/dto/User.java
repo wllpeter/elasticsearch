@@ -8,6 +8,8 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
+import java.util.Date;
+
 /**
  * @author wll
  * @Description
@@ -29,5 +31,7 @@ public class User {
     private Integer age;
     @Field(store = true, index = true, type = FieldType.keyword, analyzer = "myanalyzer", searchAnalyzer = "myanalyzer")
     private String ip;
+    @Field(store = true, index = true, type = FieldType.Date)
+    private Date created;
 
 }

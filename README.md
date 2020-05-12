@@ -114,9 +114,38 @@ http://127.0.0.1:9200/my_user/
                             "type":"keyword"
                         }
                     }
+                },
+                "create":{
+                    "type":"date",
+                    "fields":{
+                        "keyword":{
+                            "type":"keyword"
+                        }
+                    }
                 }
             }
         }
     }
 }
 
+
+####Logstash 国内加速下载
+https://www.newbe.pro/Mirrors/Mirrors-Logstash/       Logstash 国内加速下载
+conf目录下新建 logstash.conf
+input {
+    file {
+		type => "nginx_access"
+        path => "D:\nginx\logs\access.log"
+    }
+}
+output {
+    elasticsearch {
+        hosts => ["127.0.0.1:9200"]
+        index => "access-%{+YYYY.MM.dd}"
+    }
+    stdout {
+        codec => json_lines
+    }
+}
+启动：logstash.bat -f  ../config/logstash.conf
+启动：logstash.bat -f  ../config/jdbc.conf (mysql同步数据到logstash)

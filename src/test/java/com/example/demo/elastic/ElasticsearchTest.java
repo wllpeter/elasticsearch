@@ -15,6 +15,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Date;
 import java.util.Iterator;
 
 /**
@@ -59,17 +60,17 @@ public class ElasticsearchTest {
 
     @Test
     public void testInsertUser() {
-        userRepository.save(new User(3, "高新兴", "gao45", 18, "我登录的ip地址是：127.145.0.11"));
-        userRepository.save(new User(4, "神州@数码", "shen18", 18, "我登录的ip地址是：127.124.0.11"));
-        userRepository.save(new User(6, "西南大学", "xida", 18, "我登录的ip地址是：127.126.0.11"));
-        userRepository.save(new User(7, "北京大学", "beida", 18, "我记录的ip地址是：127.127.0.11"));
-        userRepository.save(new User(8, "姚#明", "yao210", 18, "我登录的@#%ip地址是：127.248.0.11"));
-        userRepository.save(new User(9, "邓紫棋", "dengml", 18, "我使用的ip地址是：127.249.0.11"));
-        userRepository.save(new User(10, "李荣浩", "li06", 18, "我使用的@ip地址是：127.234.0.11"));
-        userRepository.save(new User(11, "陈奕迅", "19ch8en", 18, "我登录的ip地址是：127.219.0.11"));
-        userRepository.save(new User(12, "周杰伦", "xiayu2014", 18, "我登录的ip地址是：127.0.0.11"));
-        userRepository.save(new User(13, "林俊杰", "zho99", 18, "我登录,的ip地址是：127.111.0.11"));
-        userRepository.save(new User(137, "林薇因", "zho99", 18, "我登录,的ip地址是：127.111.0.11"));
+        userRepository.save(new User(3, "高新兴", "gao45", 18, "我登录的ip地址是：127.145.0.11", new Date()));
+        userRepository.save(new User(4, "神州@数码", "shen18", 18, "我登录的ip地址是：127.124.0.11", new Date()));
+        userRepository.save(new User(6, "西南大学", "xida", 18, "我登录的ip地址是：127.126.0.11", new Date()));
+        userRepository.save(new User(7, "北京大学", "beida", 18, "我记录的ip地址是：127.127.0.11", new Date()));
+        userRepository.save(new User(8, "姚#明", "yao210", 18, "我登录的@#%ip地址是：127.248.0.11", new Date()));
+        userRepository.save(new User(9, "邓紫棋", "dengml", 18, "我使用的ip地址是：127.249.0.11", new Date()));
+        userRepository.save(new User(10, "李荣浩", "li06", 18, "我使用的@ip地址是：127.234.0.11", new Date()));
+        userRepository.save(new User(11, "陈奕迅", "19ch8en", 18, "我登录的ip地址是：127.219.0.11", new Date()));
+        userRepository.save(new User(12, "周杰伦", "xiayu2014", 18, "我登录的ip地址是：127.0.0.11", new Date()));
+        userRepository.save(new User(13, "林俊杰", "zho99", 18, "我登录,的ip地址是：127.111.0.11", new Date()));
+        userRepository.save(new User(137, "林薇因", "zho99", 18, "我登录,的ip地址是：127.111.0.11", new Date()));
     }
 
     @Test
