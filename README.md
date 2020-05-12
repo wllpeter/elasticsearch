@@ -149,3 +149,10 @@ output {
 }
 启动：logstash.bat -f  ../config/logstash.conf
 启动：logstash.bat -f  ../config/jdbc.conf (mysql同步数据到logstash)
+访问：http://localhost:9600/
+
+####Kibana 国内加速下载
+https://www.newbe.pro/Mirrors/Mirrors-Kibana/  Kibana 国内加速下载
+打开config路径下文件kibana.yml 。设置elasticsearch.url为启动的elasticsearch（http://localhost:9200/）
+进入kibana的bin目录，双击kibana.bat
+访问：http://localhost:5601/
