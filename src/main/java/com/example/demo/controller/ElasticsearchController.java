@@ -1,7 +1,8 @@
 package com.example.demo.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.demo.service.ElasticsearchService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Date 2020/4/16 10:43
@@ -11,6 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/search")
 @RestController
 public class ElasticsearchController {
+
+    @Autowired
+    private ElasticsearchService elasticsearchService;
+
+    @GetMapping("/queryLikeFormUser")
+    public Object queryLikeFormUser(@RequestParam String searchKey) {
+        return elasticsearchService.queryLikeFormUser(searchKey);
+    }
 
 
 }
