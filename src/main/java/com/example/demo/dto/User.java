@@ -18,7 +18,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(indexName = "my_user", type = "user")
+@Document(indexName = "search_my_user", type = "user")
 public class User {
     @Id
     @Field(store = true, index = false, type = FieldType.Integer)

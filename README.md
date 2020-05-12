@@ -156,3 +156,5 @@ https://www.newbe.pro/Mirrors/Mirrors-Kibana/  Kibana 国内加速下载
 打开config路径下文件kibana.yml 。设置elasticsearch.url为启动的elasticsearch（http://localhost:9200/）
 进入kibana的bin目录，双击kibana.bat
 访问：http://localhost:5601/
+
+guide：https://www.elastic.co/guide/cn/kibana/current/connect-to-elasticsearch.html

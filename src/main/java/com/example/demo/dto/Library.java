@@ -14,7 +14,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(indexName = "local_library", type = "book")
+@Document(indexName = "search_local_library", type = "book")
 public class Library {
 
     @Id
