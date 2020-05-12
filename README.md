@@ -6,14 +6,19 @@ https://blog.csdn.net/chenxihua1/article/details/94546282
 ####elasticsearch
 插件地址：
 https://github.com/elastic/elasticsearch/tree/5.5.3
+启动：../bin/elasticsearch.bat
 ####elasticsearch-head
 插件地址：
 https://github.com/mobz/elasticsearch-head
+启动：cd ../  grunt server &
+访问：http://ip:9100/
 ####elasticsearch-bigdesk
 插件地址：
 https://github.com/lukas-vlcek/bigdesk
 安装命令：
 ./bin/elasticsearch-plugin install https://codeload.github.com/lukas-vlcek/bigdesk/zip/v2.5.0
+启动：python -m http.server 9999
+访问：http://ip:9999
 ####elasticsearch-sql
 插件地址：
 https://github.com/NLPchina/elasticsearch-sql/tree/5.5.3.0
