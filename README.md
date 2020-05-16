@@ -4,6 +4,7 @@
 https://blog.csdn.net/chenxihua1/article/details/94546282
 
 ####elasticsearch
+https://www.newbe.pro/Mirrors/Mirrors-Elasticsearch/   Elasticsearch 国内加速下载
 插件地址：
 https://github.com/elastic/elasticsearch/tree/5.5.3
 启动：../bin/elasticsearch.bat
