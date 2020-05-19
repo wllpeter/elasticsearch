@@ -36,7 +36,7 @@ node node-server.js
 http://ip:8080/
 
 ####自定义分词器 mytokenizer
-http://127.0.0.1:9200/my_user/
+http://127.0.0.1:9200/search_my_user/
 
 {
 	"settings": {
@@ -116,13 +116,18 @@ http://127.0.0.1:9200/my_user/
                         }
                     }
                 },
-                "create":{
+                "created":{
                     "type":"date",
                     "fields":{
                         "keyword":{
                             "type":"keyword"
                         }
                     }
+                },
+                "@timestamp":{
+                       "format":"strict_date_optional_time||epoch_millis",
+                       "type":"date",
+                       "enabled":true
                 }
             }
         }

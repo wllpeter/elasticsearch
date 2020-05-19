@@ -5,6 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
+
+import java.util.Date;
+
 
 /**
  * @Date 2020/4/16 10:19
@@ -24,5 +29,6 @@ public class Library {
     private Integer bookPrice;
     private String bookAuthor;
     private String bookDesc;
-
+    @Field(store = true, index = true, type = FieldType.Date)
+    private Date created;
 }

@@ -4,11 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.Date;
+
 
 /**
  * @author wll
@@ -31,7 +33,7 @@ public class User {
     private Integer age;
     @Field(store = true, index = true, type = FieldType.keyword, analyzer = "myanalyzer", searchAnalyzer = "myanalyzer")
     private String ip;
-    @Field(store = true, index = true, type = FieldType.Date)
+    @Field(store = true, index = true, type = FieldType.Date, format = DateFormat.custom,pattern ="yyyy-MM-dd HH:mm:ss")
     private Date created;
 
 }
