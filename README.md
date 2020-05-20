@@ -155,6 +155,8 @@ output {
 }
 启动：logstash.bat -f  ../config/logstash.conf
 启动：logstash.bat -f  ../config/jdbc.conf (mysql同步数据到logstash)
+启动：logstash.bat -f  ../config/demoLog.conf (同步应用日志到elasticsearch)
+
 访问：http://localhost:9600/
 
 ####Kibana 国内加速下载
